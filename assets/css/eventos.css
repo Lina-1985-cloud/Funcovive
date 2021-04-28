@@ -1,0 +1,68 @@
+@import url(style.css);
+main{
+    margin-top: 90px;
+    font-family: var(--parrafo-font);
+    background: linear-gradient(to bottom, var(--gris_3) , var(--gris_4));
+    color: white;
+}
+main h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    color: var(--naranja);
+}
+.conoce-novedades{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color:white;
+    font-family: var(--parrafo-font);
+    margin-bottom: 30px;
+}
+main .eventos{
+    width: 80%;
+    margin: 0 auto;
+}
+main .eventos article{
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--naranja);
+}
+
+main .eventos-img{ 
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.eventos .tour .eventos-img{
+    width: 50%;
+    height: 600px;
+}
+.eventos .tour .eventos-img img{
+    width: 100%;
+    height: 100%;
+}
+main .eventos img{
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+}
+.eventos h3{
+    font-size: 2rem;
+    color: var(--naranja);
+    font-weight: bold;
+    font-family: var(--titulo-font);
+}
+.eventos h3:nth-child(1){
+    text-align: center;
+}
+.eventos p{
+    font-size: 1.2rem;
+}

@@ -1,0 +1,397 @@
+@import url(style.css);
+body{
+    font-family: var(--parrafo-font);
+}
+main{
+    background: linear-gradient(to bottom, var(--gris_4) ,var(--gris_2));
+    margin-top: 90px;
+}
+main .family{
+    width: 100%;
+    height: calc(100vh - 90px);
+    text-align: center;
+    background-image: url(../Dibujos/nuestra_fundacion.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+main .family::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fbfbfb9c;
+    z-index: 1;
+}
+
+.content-text{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.family h1,
+.family p{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.family h1{
+    color: var(--naranja);
+    font-size: 3rem;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-weight: bold;
+    
+}
+.family h4{
+    color: var(--naranja);
+    font-family: var(--subtitulo-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+.family p{
+    color: black;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+#nuestros-niños,
+#voluntarios,
+#benefactores,
+#ayuda{
+    padding-top:50px;
+    
+}
+#voluntarios{
+    margin-bottom: 20px;
+}
+
+.title-cards{
+    margin: 30px auto;
+    padding-top: 20px;
+    color: var(--naranja);
+}
+.family-cards .card{
+    width: 30%;
+    padding: 0;
+    margin: 10px auto !important;
+}
+h3{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--naranja);
+    font-weight: bold;
+    margin-top: 40px;
+}
+.family-cards a{
+    background-color: var(--azul);
+}
+/* Benefactores */
+/* .benefactores{
+    padding: 10px;
+} 
+.benefactores .benefactores-container{
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    
+    border: 1px solid rgba(204, 198, 198, 0.774);
+}
+.benefactores .benefactores-container img{
+    width: 40%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.benefactores .benefactores-container div{
+    width: 60%;
+    padding: 20px;
+}
+
+.benefactores .benefactores-container div h3{
+    color: var(--azul);
+    text-align: left;
+} */
+/* Vos tambien podes ayudar */
+.ayuda{
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-gradient-principal);
+
+}
+.ayuda h3{
+    color: var(--naranja);
+}
+.ayuda h4{
+    font-family: var(--subtitulo-font);
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    color:white;
+}
+.ayuda .ayuda-container-article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.ayuda article{
+    width: 45%;
+    margin: 10px;
+    padding: 40px 20px;
+    /* background: var(--bg-gradient); */
+    background: white;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.ayuda .ayuda-container-article h4{
+    text-align: center;
+    color: var(--naranja);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.ayuda .ayuda-container-article h6{
+    margin-bottom: 20px;
+}
+.ayuda .ayuda-container-article p{
+    font-size: 1.2rem;
+    color: black;
+    text-align: justify;
+    margin: 0 auto 20px;
+}
+.ayuda .ayuda-container-article button{
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--naranja);
+    margin: auto;
+    transition: all .5s linear;
+}
+
+.ayuda .ayuda-container-article button:hover{
+    background-color: var(--azul);
+    color: white;
+    font-size: 1.7rem;
+    transform: scale(1.1);
+}
+
+.ayuda .ayuda-container-article button:focus{
+    border: none;
+    outline: none;
+    padding: 8px 18px;
+}
+/* Modal APAGRINAMIENTO */
+
+.modal-container{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.74);
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container .modal-apadrinar{
+    width: 45%;
+    height: max-content;
+    overflow: hidden;
+    z-index: 2000;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--gris_4);
+    position: relative;
+    transition: transform 1s;
+    /* transform: translateY(-200%); */
+}
+.modal-container .modal-close{
+    transform: translateY(-200%);
+}
+.modal-apadrinar-text .close{
+    width: 30px;
+    height: 30px;
+    background-color: var(--rojo);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.modal-apadrinar figure{
+    /* width: max-content; */
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+.modal-apadrinar figure img{
+    width: 30%;
+    height: 100%;
+    object-fit: unset;
+}
+.modal-apadrinar figure figcaption{
+    font-family: var(--parrafo-font);
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    margin-left: 10px;
+}
+.modal-apadrinar .modal-apadrinar-text{
+    width: 98%;
+    height: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    /* overflow-y: scroll; */
+    
+}
+
+.modal-apadrinar .modal-apadrinar-text h3{
+    font-size: 1.7rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+address{
+    margin: 10px 0px 5px 15px;
+}
+address i{
+    width: 40px;
+    height: 40px;
+    
+}
+.whatsApp .fa-whatsapp:before,
+.fa-mobile-alt::before,
+.fa-envelope-open-text:before,
+.fa-map-marker-alt:before{
+    line-height: 40px;
+}
+address a{
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.whatsApp i,
+.phone i,
+.mail i,
+.maps i{
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.whatsApp i{
+    background-color: #25D366;
+    
+}
+.phone i{
+    background-color:var(--azul);
+}
+.mail i{
+    background-color:var(--rojo);
+}
+.maps i{
+    background-color:var(--amarillo);
+}
+
+/* -------------------------------------- */
+/*      MODAL DEL FOOTER        */
+/* -------------------------------------- */
+.contenedor-desarrolladores {
+    /* border: 1px solid red; */
+    width: auto;
+}
+.header-desarrolladores {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-desarrolladores {
+    color: var(--gris_1);
+    width: auto;
+    /* border: 1px solid red; */
+}
+.body-desarrolladores {
+    /* border: 1px solid red; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.renglon-desarrolladores {
+    /* border: 1px solid blue; */
+    color: var(--gris_1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.foto-desarrolladores {
+    width: 60px;
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foto-desarrolladores a {
+    width: 100%;
+}
+.foto-desarrolladores img {
+    border: 4px solid var(--azul);
+    border-radius: 50%;
+    width: 100%;
+}
+.foto-desarrolladores h3 {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #212121;
+}
+.footer-desarrolladores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn-desarrolladores {
+    background-color: var(--azul);
+}
+.btn-desarrolladores a {
+    color: var(--amarillo);
+    text-decoration: none;
+}
