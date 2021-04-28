@@ -4,16 +4,14 @@
 <img src="/assets/logo/funcovive2.ico" alt="Logo de Funcovive">
 
 #### Development team
-- José Luis ....(apellido-nacionalidad-link)
-- Juan Carlos ...(apellido del gatobananero- nacionalidad- link)
-- Lina ....(apellido-nacionalidad-link)
-- Priscila ....(apellido-nacionalidad-link)
-- Claudia Bleforte ....(apellido-nacionalidad-link)
+- José Luis - cartagena Colombia  Martínez Navarro
+- Lina Marcela Villa - Medellín Colombia
+- Priscila Rojas - Buenos Aires Argentina
+- Claudia Bleforte - Buenos Aires Argentina
 - Gabriel Díaz - Argentina [Contacto](http://gabriel-arg.com) 🚀
 
-#### Mokup
 
 #### Características del proyecto
-> - Aca un detalle
-> - Aca otro detalle
-> - Y asi...
+> - Página diseñada para la fundación Colombia Vive
+> - Se realizó con la combinación de código nativo y algo de Bootstrap
+> - Se usó HTML, CSS y JS
