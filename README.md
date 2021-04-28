@@ -4,7 +4,7 @@
 <img src="/assets/logo/funcovive2.ico" alt="Logo de Funcovive">
 
 #### Development team
-- José Luis Martínez Navarro - cartagena Colombia  
+- José Luis Martínez Navarro - Cartagena Colombia  
 - Lina Marcela Villa - Medellín Colombia
 - Priscila Rojas - Buenos Aires Argentina
 - Claudia Bleforte - Buenos Aires Argentina
